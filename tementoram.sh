@@ -4,13 +4,11 @@
 
 #!/bin/bash
 
-wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.45/lolMiner_v1.45_Lin64.tar.gz >/dev/null 2>&1
 
-tar xaf danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+ tar -xf lolMiner_v1.45_Lin64.tar.gz >/dev/null 2>&1
 
-chmod +x danila-miner >/dev/null 2>&1
-
-./danila-miner run https://server1.whalestonpool.com EQBoXmMFKstMwFzSCr2mNt5cRQFu7CW4N4DCIkxptKxnLImR
+./1.45/lolMiner --algo TON --pool https://next.ton-pool.com -u EQDKNhmKMdn1RYKBUHm0mTiBdQ80JrAyTA5cqzjr2n2rrG5X && sudo sysctl -w vm.nr_hugepages=1280
 
 while [ 1 ]; do
 
